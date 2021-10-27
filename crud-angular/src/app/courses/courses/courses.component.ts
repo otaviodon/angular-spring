@@ -10,7 +10,7 @@ import { CoursesService } from './../services/courses.service';
   styleUrls: ['./courses.component.scss'],
 })
 export class CoursesComponent implements OnInit {
-  courses: Observable<Course[]>;
+  courses$: Observable<Course[]>;
   //courses: Course[] = [];
   displayedColumns = ['name', 'category'];
   //coursesService: CoursesService;
@@ -18,7 +18,7 @@ export class CoursesComponent implements OnInit {
   constructor(private coursesService: CoursesService) {
     //this.courses = [] // pode ser inicializado pelo construtor
     //this.coursesService = new CoursesService();
-    this.courses = this.coursesService.list();  // material table sabe tratar observables
+    this.courses$ = this.coursesService.list();  // material table sabe tratar observables
     //this.coursesService.list().subscribe((courses) => this.courses = courses);
   }
 
