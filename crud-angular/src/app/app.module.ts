@@ -1,3 +1,4 @@
+import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -16,7 +17,8 @@ import { CoursesModule } from './courses/courses.module';
     BrowserAnimationsModule,
     MatToolbarModule,
     CoursesModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent],
